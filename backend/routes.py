@@ -61,8 +61,6 @@ def count_songs():
     count = db.songs.count_documents({})
     return jsonify({"count": count}), 200
 
-from flask import jsonify
-
 @app.route("/song", methods=["GET", "POST"])
 def song():
     if request.method == "POST":
